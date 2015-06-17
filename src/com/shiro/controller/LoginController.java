@@ -21,10 +21,10 @@ public class LoginController {
 	 * @Autowired User user;
 	 */
 	/**
-	 * 用户登录
-	 *         Subject方法	                                                                                                             描述
-	 *	hasRole(String roleName)	                                                       当用户拥有指定角色时，返回true
-	 *	hasRoles(List<String> roleNames)	                               按照列表顺序返回相应的一个boolean值数组
+	 *  用户登录
+	 *  Subject方法	                                                                      描述
+	 *	hasRole(String roleName)	                                      当用户拥有指定角色时，返回true
+	 *	hasRoles(List<String> roleNames)	                      按照列表顺序返回相应的一个boolean值数组
 	 *	hasAllRoles(Collection<String> roleNames)      如果用户拥有所有指定角色时，返回true
 	 * @param user 登录用户
 	 * @return
