@@ -6,14 +6,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value="user")
+@RequestMapping(value="/user")
 public class UserController {
 	/**
 	 * 跳转到myjsp页面
 	 * 
 	 * @return
 	 */
-	@RequestMapping(params = "myjsp")
+	@RequestMapping(params = "/myjsp")
 	public String home() {
 		Subject currentUser = SecurityUtils.getSubject();
 		if(currentUser.isPermitted("user.do?myjsp")){
@@ -22,7 +22,7 @@ public class UserController {
 			return "error/noperms";
 		}
 	}
-	@RequestMapping(params = "notmyjsp")
+	@RequestMapping(params = "/notmyjsp")
 	public String nopermission() {
 		Subject currentUser = SecurityUtils.getSubject();
 		if(currentUser.isPermitted("user.do?notmyjsp")){

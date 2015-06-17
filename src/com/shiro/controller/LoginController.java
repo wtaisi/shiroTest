@@ -15,7 +15,7 @@ import com.shiro.Utils.EncryptUtils;
 import com.shiro.model.User;
 
 @Controller
-@RequestMapping(value = "login")
+@RequestMapping(value = "/login")
 public class LoginController {
 	/*
 	 * @Autowired User user;
@@ -29,7 +29,7 @@ public class LoginController {
 	 * @param user 登录用户
 	 * @return
 	 */
-	@RequestMapping(params = "main")
+	@RequestMapping(params = "/main")
 	public ModelAndView login(User user,HttpSession session, HttpServletRequest request) {
 
 		ModelAndView modelView = new ModelAndView();
@@ -62,7 +62,7 @@ public class LoginController {
 	 * 
 	 * @return
 	 */
-	@RequestMapping(params = "logout")
+	@RequestMapping(params = "/logout")
 	public String logout() {
 		Subject currentUser = SecurityUtils.getSubject();
 		try {
@@ -74,7 +74,7 @@ public class LoginController {
 		return "/login";
 	}
 
-	@RequestMapping(params = "myjsp")
+	@RequestMapping(params = "/myjsp")
 	public ModelAndView login2() {
 		
 		System.out.println("sss");
@@ -84,7 +84,7 @@ public class LoginController {
 		return modelView;
 	}
 
-	@RequestMapping(params = "test")
+	@RequestMapping(params = "/test")
 	public ModelAndView login3() {
 		System.out.println("sss");
 		ModelAndView modelView = new ModelAndView();
