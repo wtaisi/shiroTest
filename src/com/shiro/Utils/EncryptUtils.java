@@ -1,11 +1,11 @@
 package com.shiro.Utils;
 
-import junit.framework.Assert;
 
 import org.apache.shiro.codec.Base64;
 import org.apache.shiro.codec.Hex;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.crypto.hash.Sha256Hash;
+import org.junit.Assert;
 import org.junit.Test;
 public class EncryptUtils {
 	public static final String encryptMD5(String source) {
